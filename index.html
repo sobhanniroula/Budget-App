@@ -5,7 +5,7 @@
         <title> Budget App - SOBHAN </title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
@@ -20,20 +20,23 @@
                 <div id="budget">
                     <p> + 1,234.56 </p>
                 </div>
-                <div id="income-area">
-                    <div id="income-description">
-                        <p> INCOME </p>
+                <div id = "income-area">
+                    <div class="small-div-1" id="income-description">
+                        <p> INCOME: </p>
                     </div>
-                    <div id="income-number">
+                    <div class="small-div-1" id="income-number">
                         <p> +2,500.00 </p>
                     </div>
                 </div>
                 <div id="expense-area">
-                    <div id="expense-description">
-                        <p> EXPENSE </p>
+                    <div class="small-div-2" id="expense-description">
+                        <p> EXPENSE: </p>
                     </div>
-                    <div id="expense-number">
-                        <p> +1,265.44 </p>
+                    <div class="small-div-2" id="expense-number">
+                        <p> -1,265.44 </p>
+                    </div>
+                    <div class="small-div-2" id="exp-percentage">
+                        <p> 55% </p>
                     </div>
                 </div>
             </div>
@@ -42,16 +45,19 @@
             <div class="footer" id="footer-area">
                 <div class="input" id="input-area">
                     <div id="type-area">
-                        
+                        <select class="sign-type">
+                            <option value="inc" selected>+</option>
+                            <option value="exp">-</option>
+                        </select>
                     </div>
                     <div id="description-input-area">
-                        
+                        <input type="text" class="add-description" placeholder="Description">
                     </div>
                     <div id="value-input-area">
-                        
+                        <input type="number" class="add-value" placeholder="Value"> 
                     </div>
                     <div id="tick-area">
-                        
+                        <button id="btn-tick"><i class="material-icons">check_circle</i></button>
                     </div>
                 </div>
     
@@ -60,15 +66,30 @@
                         <div id="inc-title">
                             <p> INCOMES </p>
                         </div>
-                
-    
-    
-    
-    
-    
-    
-    
-    
+                        
+                        <!-- Don't forget to comment it out: below -->
+                        
+<!--
+                        <div class="lists" id="income-0">
+                            <div class="lists-item">Salary</div>
+                            <div class="right-side">
+                                <div class="lists-item-delete">
+                                    <button class="delete-btn"><i class="material-icons">cancel</i></button>
+                                </div>
+                                <div class="lists-item-value">+1,500.00</div>
+                            </div>
+                        </div>
+                        <div class="lists" id="income-1">
+                            <div class="lists-item">Sold Car</div>
+                            <div class="right-side">
+                                <div class="lists-item-delete">
+                                    <button class="delete-btn"><i class="material-icons">cancel</i></button>
+                                </div>
+                                <div class="lists-item-value">+2,500.00</div>
+                            </div>
+                        </div>
+-->
+                    <!-- Don't forget to comment it out: above-->
     
                     </div>
                     
@@ -77,22 +98,36 @@
                             <p> EXPENSES </p>
                         </div>
                 
-    
-    
-    
-    
-    
-    
-    
-    
-    
+                        <!-- Don't forget to comment it out: below -->
+<!--
+                     
+                        <div class="lists" id="expense-0">
+                            <div class="lists-item">Holiday</div>
+                            <div class="right-side">
+                                <div class="lists-item-delete">
+                                    <button class="delete-btn"><i class="material-icons">cancel</i></button>
+                                </div>
+                                  <div class="lists-item-percentage">20%</div>
+                                <div class="lists-item-value">-500.00</div>
+                            </div>
+                        </div>
+                        <div class="lists" id="expense-1">
+                            <div class="lists-item">Groceries</div>
+                            <div class="right-side">
+                                <div class="lists-item-delete">
+                                    <button class="delete-btn"><i class="large material-icons">cancel</i></button>
+                                </div>
+                                <div class="lists-item-percentage">10%</div>
+                                <div class="lists-item-value">-200.00</div>
+                            </div>
+                        </div>
+                
+-->
+                    <!-- Don't forget to comment it out: above-->
+                        
+        
                     </div>
-                    
-                    
-    
-    
-    
-    
+                        
     
             </div>
         </div>

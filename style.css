@@ -1,10 +1,340 @@
 * {
-    
+   box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background: url('img/background.jpg'), no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('img/background.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    font-family: 'Baloo Bhai', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    position: relative;
 }
+
+.main-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    color: beige;
+    letter-spacing: 2px;
+    float: top;
+    height: 38vh;
+    position: absolute;
+}
+
+#month {
+    margin-top: 8vh;
+}
+
+#budget {
+    margin-top: 3vh;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+#income-area {
+    margin-top: 3vh;
+    background-color: #66cc99;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#expense-area {
+    margin-top: 2vh;
+    background-color: #d27979;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#income-description, #income-number {
+    float: left;
+    margin: 4px 2px;
+    width: 40%;
+    padding: 5px;
+}
+
+#income-number {
+    background-color:  #79d2a6;
+}
+
+#expense-description, #expense-number {
+    float: left;
+    margin: 4px 2px;
+    width: 40%;
+    padding: 5px;
+}
+
+#expense-number {
+    background-color: #d98c8c;
+}
+
+#exp-percentage {
+    float: left;
+    margin: 12px 5px;
+    width: 12%;
+    height: 18px;
+    padding: 2px 3px;
+    background-color: #bf4040;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+button {
+    background: none;
+    border: none;
+    color: green;
+}
+
+.footer {
+    background-color: #F5F5F5;
+    float: top;
+    height: 60vh;
+    position: absolute;
+    margin-top: 39vh;
+    margin-bottom: 0vh;
+    width: 100%;
+}
+
+.input {
+    background-color: #F0F0F0;
+    width: 100%;
+    height: 65px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid;
+    border-color: #E8E8E8;
+}
+
+#type-area {
+     float: left;
+     width: 2%;
+     margin: 5px 15px;
+}
+
+#description-input-area{
+    float: left;
+    width: 15%;
+    margin: 5px 15px;
+}
+
+#value-input-area{
+    float: left;
+     width: 15%;
+     margin: 5px;
+}
+
+#tick-area {
+   float: left;
+     width: 2%;
+     margin: 5px 15px;   
+}
+
+.output {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 55vh;
+    border-radius: 10px;
+    width: 100%;
+}
+
+input {
+    height: 40px;
+    margin-left: 15px;
+    width: 100%;
+   border-radius: 2px;
+    border: none;
+}
+
+::placeholder {
+    text-align: center;
+    color: #66cc99;
+    letter-spacing: 3px;
+}
+
+select {
+    height: 40px;
+    width: 50px;
+    margin-right: 5px;
+    color: #66cc99;
+    border-radius: 2px;
+    border: none;
+}
+
+button {
+    padding-top: 5px;
+    margin-left: 7px;
+    color: #66cc99;
+}
+
+button:hover {
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(2px);
+} 
+
+#inc-section {
+    float: left;
+     width: 50%;
+     margin: 15px 0px;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid;
+    border-color: #E8E8E8;
+}
+
+#exp-section {
+    float: left;
+     width: 50%;
+     margin: 15px 0px;
+    justify-content: center;
+    text-align: center;
+}
+
+#inc-title{
+    background-color: #66cc99;
+    color: aliceblue;
+    width: 50%;
+   transform: translate(50%, 50%);
+    border-radius: 5px;
+}
+
+#exp-title {
+    background-color: #d27979;
+    color: aliceblue;
+    width: 50%;
+    transform: translate(50%, 50%);
+     border-radius: 5px;
+}
+
+.lists {
+    margin: 2px 20px;
+    padding: 12px;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 18px;
+    height: 50px;
+    width: 80%
+}
+
+#inc-section .lists {
+    float: right;
+}
+
+.lists:first-child {
+    border-top: 1px solid #e7e7e7;
+    
+}
+
+.lists:nth-child(even) {
+    background-color: #f7f7f7;
+    margin-top: 25px;
+}
+
+.lists-item {
+   float: left;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+
+.lists-item-percentage {
+    float: right;
+    margin-left: 5px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+    font-size: 12px;
+    background-color: #ffdad9;
+    padding: 3px;
+    border-radius: 5px;
+    width: 35px;
+    text-align: center;
+}
+.lists-item-value {
+    float: left;
+    transition: transform 0.3s;
+    float: right;
+    margin-right: 20px;
+}
+
+#inc-section .delete-btn,
+#inc-section .lists-item-value{
+    color: #28B9B5;
+}
+
+#exp-section .lists-item-value,
+#exp-section .lists-item-percentage {
+     color: #FF5049;
+}
+#exp-section .delete-btn {
+    color: #ff6b66;
+}
+
+.lists-item-delete {
+    float: right;
+}
+
+.delete-btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;line-height: 1;
+    display: none;
+}
+
+.delete-btn:focus {
+    outline: none;
+}
+
+.lists:hover .delete-btn {
+    display: block;
+}
+.lists:hover .lists-item-value {
+    transform: translateX(-20px);
+}
+.lists:hover .lists-item-percentage {
+    transform: translateX(-20px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
