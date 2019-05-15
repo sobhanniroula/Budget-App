@@ -105,9 +105,9 @@ button {
 .footer {
     background-color: #F5F5F5;
     float: top;
-    height: 60vh;
+    height: 63vh;
     position: absolute;
-    margin-top: 39vh;
+    margin-top: 37vh;
     margin-bottom: 0vh;
     width: 100%;
 }
@@ -171,6 +171,7 @@ input {
     text-align: center;
     color: #66cc99;
     letter-spacing: 3px;
+    width: 90%;
 }
 
 select {
