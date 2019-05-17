@@ -160,7 +160,8 @@ var UIController = (function() {
         expenseLabel: '#expense-number',
         percentageLabel: '#exp-percentage',
         outputArea: '.output',
-        expensesPercLabel: '.lists-item-percentage'
+        expensesPercLabel: '.lists-item-percentage',
+        date: '#month'
     }
     
     var formatNumber = function(num, type) {
@@ -177,6 +178,8 @@ var UIController = (function() {
             
             return (type === 'inc' ? '+' : '-') + ' ' + int + '.' + dec;
         };
+    
+   
     
     return {
         getInput: function(){
@@ -251,7 +254,7 @@ var UIController = (function() {
         displayPercentage: function(percentage) {
             var fields = document.querySelectorAll(DOMstrings.expensesPercLabel);
             
-            var nodeListForEach = function(list, callback) {
+             var nodeListForEach = function(list, callback) {
               for (var i = 0; i < list.length; i++) {
                   callback(list[i], i);
               }  
@@ -264,6 +267,14 @@ var UIController = (function() {
                     current.textContent = '---';
                 }
             });
+        },
+        
+        displayMonth: function() {
+            var now = new Date();
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var month = now.getMonth();
+            var year = now.getFullYear(); 
+            document.querySelector(DOMstrings.date).textContent = 'Available Budget in ' + months[month] + ' ' + year;
         },
         
         getDOMstrings: function() {
@@ -301,6 +312,8 @@ var controller = (function(budgetCtrl, UICtrl) {
         });
         
         document.querySelector(DOM.outputArea).addEventListener('click', ctrlDeleteItem);
+        
+        document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
     
     };
     
@@ -383,13 +396,14 @@ var controller = (function(budgetCtrl, UICtrl) {
     return {
       init: function() {
           setupEventListeners();
-          console.log('GAME STARTED!!');
+
           UICtrl.displayBudget({
                 budget: 0,
                 totalInc: 0,
                 totalExp: 0,
                 percentage: -1
             });
+          UICtrl.displayMonth();
       }  
     };
 })(budgetController, UIController);

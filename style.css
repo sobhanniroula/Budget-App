@@ -169,7 +169,7 @@ input {
 
 ::placeholder {
     text-align: center;
-    color: #66cc99;
+    color: #ff794d;
     letter-spacing: 3px;
     width: 90%;
 }
@@ -178,7 +178,7 @@ select {
     height: 40px;
     width: 50px;
     margin-right: 5px;
-    color: #66cc99;
+    color: #ff794d;
     border-radius: 2px;
     border: none;
 }
@@ -186,7 +186,7 @@ select {
 button {
     padding-top: 5px;
     margin-left: 7px;
-    color: #66cc99;
+    color: #ff794d;
 }
 
 button:hover {
@@ -320,9 +320,6 @@ button:active {
 .lists:hover .lists-item-percentage {
     transform: translateX(-20px);
 }
-
-
-
 
 
 
